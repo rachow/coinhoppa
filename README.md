@@ -59,6 +59,7 @@ The following are under consideration for future additions to this application.
 - DB Migrations/Schema changes to run through repo, naming conventions to include JIRA ticket, or JIRA to link developer branch to ticket as part of the workflow.
 - Strict following of Gitflow Workflow is a must! (branches like `develop`, `feature/CH-103478-add-aws-trace-id`. You must branch of the `develop` as the main branch is the squash + merge :D)
 - Production DB changes to be verified by DBA and signed-off, any downtimes to be scheduled in advance.
+- i18n changes -> DB strict utf-8 character encoding support, localization, translations, currency exchange rates, and more.
 - TBC
 
 ## Contributing
