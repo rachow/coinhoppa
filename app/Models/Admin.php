@@ -43,17 +43,23 @@ class Admin extends Model
     ];
 
 	/**
-	 * hidden attributes
+	 * hidden attributes.
 	*/
 	protected $hidden = [
         'password',
         'remember_token',
 	];	
 
+    /**
+     * additional attributes.
+     */
 	protected $appends = [
 		'useronline',
 	];
 
+    /**
+     * attributes castings.
+     */
 	protected $casts = [
 		'created_at' => 'datetime:d-m-Y H:i',
 		'updated_at' => 'datetime:d-m-Y H:i',
