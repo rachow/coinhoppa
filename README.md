@@ -53,6 +53,7 @@ The following are under consideration for future additions to this application.
 - To separate shared libraries to repo `coinhoppa.lib` and to enforce `\\Coinhoppa\\` namespace. Allowing us to easily add SDK packages. 
 - To add additional repositiories to existing you will need to add the `repositories:{}` element to the composer.json file [Repositories](https://getcomposer.org/doc/05-repositories.md)
 - To embrace TALL stack (Tailwind, Alphine, ...)
+- Use of Telescope for optimisation and debugging must only be on dev local or QA.
 - To build frontend stack as SPA (Single Page Application), and allow connections to APIs to power all the bells & whistles. [JWT](https://jwt.io/) may end up in the mix here, also using the browsers localStorage && sessionStorage APIs.
 - FCP/LCP - PageSpeed, Network timing measurement through sending beacons. Check browser support for `PING` type request.
 - DB Migrations/Schema changes to run through repo, naming conventions to include JIRA ticket, or JIRA to link developer branch to ticket as part of the workflow.
