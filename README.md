@@ -13,7 +13,7 @@ The project is on-going with changes added as seen feasible.
 You can copy and download this repository. Here is an example.
 
 ```bash
-git clone 
+git clone https://github.com/rachow/coinhoppa.git
 ```
 
 ## Usage
@@ -53,11 +53,13 @@ The following are under consideration for future additions to this application.
 - To separate shared libraries to repo `coinhoppa.lib` and to enforce `\\Coinhoppa\\` namespace. Allowing us to easily add SDK packages. 
 - To add additional repositiories to existing you will need to add the `repositories:{}` element to the composer.json file [Repositories](https://getcomposer.org/doc/05-repositories.md)
 - To embrace TALL stack (Tailwind, Alphine, ...)
+- Use of Telescope for optimisation and debugging must only be on dev local or QA.
 - To build frontend stack as SPA (Single Page Application), and allow connections to APIs to power all the bells & whistles. [JWT](https://jwt.io/) may end up in the mix here, also using the browsers localStorage && sessionStorage APIs.
 - FCP/LCP - PageSpeed, Network timing measurement through sending beacons. Check browser support for `PING` type request.
 - DB Migrations/Schema changes to run through repo, naming conventions to include JIRA ticket, or JIRA to link developer branch to ticket as part of the workflow.
-- Strict following of Gitflow Workflow is a must!
+- Strict following of Gitflow Workflow is a must! (branches like `develop`, `feature/CH-103478-add-aws-trace-id`. You must branch of the `develop` as the main branch is the squash + merge :D)
 - Production DB changes to be verified by DBA and signed-off, any downtimes to be scheduled in advance.
+- i18n changes -> DB strict utf-8 character encoding support, localization, translations, currency exchange rates, and more.
 - TBC
 
 ## Contributing
