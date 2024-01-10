@@ -6,7 +6,7 @@ The project will provide a good foundation on building a SaaS product to the mar
 
 The project is on-going with changes added as seen feasible.
 
-
+<img width="474" alt="coinhoppa-logo" src="https://github.com/rachow/coinhoppa/assets/12745192/cd2e02f9-554f-4d9f-bc50-d2de5e8bfd07">
 
 ## Installation
 
