@@ -39,7 +39,8 @@ class CheckBlacklistIpAddress
     {
         if ($this->validIpAddress($request->getClientIp()) || 
             $this->validIpAddressRange($request->getClientIp())) {
-
+            
+            $this->isBlockedAccess = true;
             return $this->errorResponse('You are restricted from access.', 403);
 		}
         return $next($request);
