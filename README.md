@@ -13,7 +13,7 @@ The project is on-going with changes added as seen feasible.
 You can copy and download this repository. Here is an example.
 
 ```bash
-git clone 
+git clone https://github.com/rachow/coinhoppa.git
 ```
 
 ## Usage
