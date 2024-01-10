@@ -46,6 +46,7 @@ The following are under consideration for future additions to this application.
 - For production use case only if available to public (www), proxy the request to port mapping for example `wss://www.example.com:8989`
 - Allow traders to download their trading history by connecting their exchange platform and sync'ing their trading data in XLS format.
 - Allow traders to create rules for the trading bots (DCA - Dollar-Cost-Average).
+- Process that runs on node [x] / EC2, process control `PCNTL` through `supervisord`.
 - Add TA (**Technical Analysis**) modules for further analysis on the coins using BB, MACD, RSI, etc.
 - Auth0 authentication for SSO between other apps, to handle blacklisting and Dos/DDos mitigation, API authentication and more.
 - Deployer for deploying the app. [Laravel Deployer](https://deployer.org/docs/7.x/recipe/laravel) or [Laravel Forge](https://forge.laravel.com/)
@@ -54,6 +55,9 @@ The following are under consideration for future additions to this application.
 - To embrace TALL stack (Tailwind, Alphine, ...)
 - To build frontend stack as SPA (Single Page Application), and allow connections to APIs to power all the bells & whistles. [JWT](https://jwt.io/) may end up in the mix here, also using the browsers localStorage && sessionStorage APIs.
 - FCP/LCP - PageSpeed, Network timing measurement through sending beacons. Check browser support for `PING` type request.
+- DB Migrations/Schema changes to run through repo, naming conventions to include JIRA ticket, or JIRA to link developer branch to ticket as part of the workflow.
+- Strict following of Gitflow Workflow is a must!
+- Production DB changes to be verified by DBA and signed-off, any downtimes to be scheduled in advance.
 - TBC
 
 ## Contributing
