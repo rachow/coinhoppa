@@ -18,18 +18,18 @@ abstract class TechnicalAnalysis
     protected $data;
 
 	protected $movingAverageTypes = [
-		'sma'   => TRADER_MA_TYPE_SMA,   # simple moving average
-		'ema'   => TRADER_MA_TYPE_EMA,   # exponential moving average
-		'wma'   => TRADER_MA_TYPE_WMA,   # weighted moving average
-		'dema'  => TRADER_MA_TYPE_DEMA,  # double exponential moving average
-		'tema'  => TRADER_MA_TYPE_TEMA,  # triple exponential moving average
-		'trima' => TRADER_MA_TYPE_TRIMA, # triangular moving average
-		'kama'  => TRADER_MA_TYPE_KAMA,  # kaufman's adaptive moving average
-		'mama'  => TRADER_MA_TYPE_MAMA,  # the mother of adaptive moving average
-		't3'	=> TRADER_MA_TYPE_T3,	 # the triple exponential moving average 
+		'sma'   => TRADER_MA_TYPE_SMA,   // simple moving average
+		'ema'   => TRADER_MA_TYPE_EMA,   // exponential moving average
+		'wma'   => TRADER_MA_TYPE_WMA,   // weighted moving average
+		'dema'  => TRADER_MA_TYPE_DEMA,  // double exponential moving average
+		'tema'  => TRADER_MA_TYPE_TEMA,  // triple exponential moving average
+		'trima' => TRADER_MA_TYPE_TRIMA, // triangular moving average
+		'kama'  => TRADER_MA_TYPE_KAMA,  // kaufman's adaptive moving average
+		'mama'  => TRADER_MA_TYPE_MAMA,  // the mother of adaptive moving average
+		't3'	=> TRADER_MA_TYPE_T3,	 // the triple exponential moving average 
 	];
 
-	protected $ta_indc; # TA indicators
+	protected $techicalIndicators = []; // TA indicators
 
 	/**
      * Creates an instance.
@@ -52,7 +52,7 @@ abstract class TechnicalAnalysis
 		if (!in_array($ma, $this->movingAverageTypes)) {
 			return 0;
 		}
-		return $this->ma_types[$ma];
+		return $this->movingAverageTypes[$ma];
 	}
 
 	/**
@@ -100,14 +100,14 @@ abstract class TechnicalAnalysis
 		$self 	= basename(__FILE__);
         
         if ($dh = opendir($dir)) {
-			while(($file == readdir($dh)) !== false) {
-				if($file == '.' || $file == '..' || $file == $self)
+			while (($file == readdir($dh)) !== false) {
+				if ($file == '.' || $file == '..' || $file == $self) {
 					continue;
-
+				}
 				// convert to names as 'rsi', 'ma', 'obv', 'macd', 'adx'
 				$file = substr($file, 0, strrpos($file, '.'));
 				$indc = strtolower($file);
-				$this->ta_indc[] = $indc;
+				array_push($this->technicalIndicators, $inc);
 			}
 			closedir($dh);
         }
