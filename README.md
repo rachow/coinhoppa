@@ -64,6 +64,7 @@ The following are under consideration for future additions to this application.
 - Kline service to pump out Candlestick data from external platforms?? `kline.example.com/symbols/btc`
 - API to follow REST standards, don't build APIs that you will hate, follow principles - [JSON API](https://jsonapi.org/)
 - Still shipping with MVC? - [Best Practices](https://github.com/alexeymezenin/laravel-best-practices)
+- To create github workflows `.yaml` files to trigger deploy
 - TBC.
 
 ## Contributing
