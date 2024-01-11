@@ -33,47 +33,42 @@ window.axios.defaults.baseURL = '/ajax';
 window.axios.interceptors.response.use((response) => {
 	return response;
 }, (error) => {
-	if(error.response)
-	{
+	if (error.response) {
 		let http_code = error.response.status;
-		if(http_code === 401)
-		{
+		if (http_code === 401) {
 			let err = 'Your session has expired.';
 			let paths = window.location.pathname.split("/");
 	
-			if(paths[1] != "login"){
+			if (paths[1] != "login") {
 				console.log('error:'+err);
-				if($('#modal-info-alert').length){
+				if ($('#modal-info-alert').length) {
 					$('.modal-info-text').html(err + '<br> You must login.');
 					$('#modal-info-alert').modal('show');
-					$('#modal-info-alert').find('button').bind("click", function(e){
-						
+					$('#modal-info-alert').find('button').bind("click", function(e) {
 						//window.location.href = '/login';	
 						window.location.reload(); /* reload will maintain the redirect back */
 					});
-				}else{
+				} else {
 					alert(err);
 					window.location.reload();
 				}
 			}
 
-		}else if(http_code == 500)
-		{
+		} else if(http_code == 500) {
 			let err = 'We apologies for the error.';
 			console.log('err:'+err);
 		
-			// TODO: add to Bugsnag so engineers are aware.
+			// bugsnag so engineers are aware.
 			let err_body = error.response.data;
 			Bugsnag.notify(error);
 
-			if($('#modal-error-alert').length){
+			if ($('#modal-error-alert').length) {
 				$('.modal-error-text').html(err + '<br>Our engineers are taking a look.');
 				$('#modal-error-alert').modal('show');
-			}else{
+			} else {
 				alert(err + "\r\nOur engineers are taking a look.");
 			}
 		}
 	}
-
 	return Promise.reject(error);
 });
