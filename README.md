@@ -46,11 +46,11 @@ The following are under consideration for future additions to this application.
 - For production use case only if available to public (www), proxy the request to port mapping for example `wss://www.example.com:8989`
 - Allow traders to download their trading history by connecting their exchange platform and sync'ing their trading data in XLS format.
 - Allow traders to create rules for the trading bots (DCA - Dollar-Cost-Average).
-- Process that runs on node [x] / EC2, process control `PCNTL` through `supervisord`.
+- Process that runs on node [x]-[x]-[x] / EC2, process control `PCNTL` through `supervisord`.
 - Add TA (**Technical Analysis**) modules for further analysis on the coins using BB, MACD, RSI, etc.
-- Auth0 authentication for SSO between other apps, to handle blacklisting and Dos/DDos mitigation, API authentication and more.
+- Auth0 authentication for SSO between other apps, to handle blacklisting (IPV4/IPV6) and Dos/DDos mitigation, API authentication and more. Amazon also play important role, stick a Gateway API, WAF, Firewall. 
 - Deployer for deploying the app. [Laravel Deployer](https://deployer.org/docs/7.x/recipe/laravel) or [Laravel Forge](https://forge.laravel.com/)
-- To separate shared libraries to repo `coinhoppa.lib` and to enforce `\\Coinhoppa\\` namespace. Allowing us to easily add SDK packages. 
+- To separate shared libraries to repo `coinhoppa.lib` and to enforce `\\Coinhoppa\\` namespace. Allowing us to easily add SDK packages including following PSR-0 standards. 
 - To add additional repositiories to existing you will need to add the `repositories:{}` element to the composer.json file [Repositories](https://getcomposer.org/doc/05-repositories.md)
 - To embrace TALL stack (Tailwind, Alphine, ...)
 - Use of Telescope for optimisation and debugging must only be on dev local or QA.
@@ -58,8 +58,9 @@ The following are under consideration for future additions to this application.
 - FCP/LCP - PageSpeed, Network timing measurement through sending beacons. Check browser support for `PING` type request.
 - DB Migrations/Schema changes to run through repo, naming conventions to include JIRA ticket, or JIRA to link developer branch to ticket as part of the workflow.
 - Strict following of Gitflow Workflow is a must! (branches like `develop`, `feature/CH-103478-add-aws-trace-id`. You must branch of the `develop` as the main branch is the squash + merge :D)
-- Production DB changes to be verified by DBA and signed-off, any downtimes to be scheduled in advance.
-- i18n changes -> DB strict utf-8 character encoding support, localization, translations, currency exchange rates, and more.
+- Peer code reviews to take place, Coding Standards to be documented on Confluence. 
+- Production DB changes to be verified by DBAs and signed-off, any downtimes to be scheduled in advance.
+- i18n changes -> DB strict utf-8 `utf8_general_ci` character encoding support, localization, translations, currency exchange rates, and more.
 - TBC
 
 ## Contributing
