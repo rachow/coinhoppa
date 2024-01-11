@@ -43,6 +43,13 @@ class Kernel extends HttpKernel
             // \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
             'throttle:api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+ 	        \App\Http\Middleware\Api\JsonPrettyPrint::class,
+	        \App\Http\Middleware\Api\CheckWhitelistIpAddress::class,
+    	    \App\Http\Middleware\Api\CheckBlacklistIpAddress::class,
+	        \App\Http\Middleware\Api\JsonRequestValidate::class,
+	        \App\Http\Middleware\Api\BasicAuthenticate::class,
+	        \App\Http\Middleware\Api\RequestLoggingContext::class,
+            \App\Http\Middleware\Api\RequestLogging::class,
         ],
     ];
 
