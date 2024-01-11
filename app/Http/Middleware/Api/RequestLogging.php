@@ -50,10 +50,10 @@ class RequestLogger
 		$header = $this->getHeadersFromRequest();
 		$body	= $request->getContent();
 
-        $url_str = "$ip $method $url";
+        $urlStr = "$ip $method $url";
 
         if ($query) {
-            $url_str .= "?$query";
+            $urlStr .= "?$query";
         }
 
 		if (array_key_exists('Authorization', $header)) {
@@ -61,7 +61,7 @@ class RequestLogger
             $header['Authorization'] = 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX';
 		}
 
-        $this->logger->info($url_str);
+        $this->logger->info($urlStr);
         $this->logger->info(json_encode($header, JSON_PRETTY_PRINT));
         $this->logger->info($body);
 
@@ -77,19 +77,19 @@ class RequestLogger
 	 */
 	private function getLoggerInstance(Request $request)
 	{
-		$date_str = now()->format('m_d_Y');
-		$file_path = 'api.log';
+		$dateStr = now()->format('m_d_Y');
+		$filePath = 'api.log';
 		
-		$date_format = "d/m/Y H:i:s";
+		$dateFormat = "d/m/Y H:i:s";
 
 		$output = "[%datetime%] %channel%.%level_name%: %message%\n";
-		$formatter = new LineFormatter($output, $date_format);
+		$formatter = new LineFormatter($output, $dateFormat);
 
-		$stream = new StreamHandler(storage_path('logs/' . $file_path), Logger::DEBUG);
+		$stream = new StreamHandler(storage_path('logs/' . $filePath), Logger::DEBUG);
 		$stream->setFormatter($formatter);
 
-		$request_id = $request->header('X-Trace-Id') ?? Str::uuid()->toString();
-		$logger = new Logger($request_id);
+		$requestId = $request->header('X-Trace-Id') ?? Str::uuid()->toString();
+		$logger = new Logger($requestId);
 		$logger->pushHandler($stream);
 
 		return $logger;
