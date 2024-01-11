@@ -4,40 +4,44 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-//require('./bootstrap');
+require('./bootstrap');
 
-//window.Vue = require('vue').default;
+window.Bugsnag = require('@bugsnag/js');
+window.baseURL = process.env.MIX_APP_URL;
 
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
-
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
-
-//Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+// API configurations.
+window.basicAuth = 'Basic ' + btoa( process.env.MIX_APP_BASIC_USERNAME 
+ + ':' + process.env.MIX_APP_BASIC_PASSWORD);
+window.apiHeaders = {
+   headers: { 'Authorization': window.basicAuth }
+};
 
 /**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
+ * Icon set for console logging.
+*/
+window.mad = String.fromCodePoint(0x1F621);
+window.scream = String.fromCodePoint(0x1F631);
+window.wave = String.fromCodePoint(0x1F44B);
+window.bug = String.fromCodePoint(0x1F41E);
+window.flame = String.fromCodePoint(0x1F525);
+window.wink = String.fromCodePoint(0x1F609);
+window.robot = String.fromCodePoint(0x1F916);
+window.points = String.fromCodePoint(0x1F4AF);
+window.spark = String.fromCodePoint(0x1F4A5);
+window.dizzy = String.fromCodePoint(0x1F4AB);
+window.bomb = String.fromCodePoint(0x1F4A3);
+window.rocket = String.fromCodePoint(0x1F680);
 
-//const app = new Vue({
- //   el: '#app',
-//});
+// load bug notifier
+Bugsnag.start({
+	apiKey: process.env.MIX_BUGSNAG_API_KEY,
+	appVersion: process.env.MIX_APP_VERSION //  app release version
+});
 
-// after all the noise above, lets start fresh - $rachow
-
-import Alpine from 'alpinejs'
-
-window.Alpine = Alpine
-
-Alpine.start();
-
-
-
+/**
+ * restrict iframe - other options?
+ * @2022
+*/
+if (window.top != window.self) {
+	top.location.href = document.location.href;
+}
