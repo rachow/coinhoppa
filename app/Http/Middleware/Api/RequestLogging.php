@@ -19,7 +19,7 @@ use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 use Illuminate\Support\Facades\App;
 
-class RequestLogger
+class RequestLogging
 {
     // RequestLoggerContext class runs before.
     
