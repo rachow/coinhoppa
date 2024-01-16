@@ -78,6 +78,7 @@ The following are under consideration for future additions to this application.
     - What operations will they perform, to what? Is it convenient timing? will it create a hiccup on the platform?
     - Ensure that DBAs are held accountable.
   - Always provide READ-ONLY access to production instances, hold only limited individuals accountable.
+  - Avoid the `%` user host when adding or editing user accounts, always try to be specific in the IP address, or ensure there are security policies in place (AWS).
   - Schedule and Off-load intensive SQLs, ETLs, Reporting to a timely off-peak period.
   - DB Backup is essential, daily, nightly backups. The Golden rule is usually to replicate 3 copies, 2 copies remain on-site and the last off-site. This is intitiated from a Disaster Recovery Plan.
 - Time to scale the DB?
