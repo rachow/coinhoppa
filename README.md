@@ -25,7 +25,9 @@ If you have not installed composer globally then you will need to get composer a
 $ composer install
 $ npm install
 $ npm run dev
-
+$ npm run build
+$ php artisan serve
+  INFO  Server running on [http://127.0.0.1:8000].
 ```
 There is also a deployment **shell script** is to be used in QA/Prod environent. You may need to customise some of the tasks within the shell script, for example to the `$ ./artisan down` can accept other arguments to allow access by certain IP address or using a bypass token.
 
@@ -64,7 +66,19 @@ The following are under consideration for future additions to this application.
 - Kline service to pump out Candlestick data from external platforms?? `kline.example.com/symbols/btc`
 - API to follow REST standards, don't build APIs that you will hate, follow principles - [JSON API](https://jsonapi.org/)
 - Still shipping with MVC? - [Best Practices](https://github.com/alexeymezenin/laravel-best-practices)
-- To create github workflows `.yaml` files to trigger deploy
+- To create GitHub Workflows `prod.yaml` && `alpha.yaml` files to trigger CI/CD deployment. This means that the `deploy.sh` may not be required.
+- Monitor SQLs - QPS (Query Per Second) and TPS (Transaction Per Second), Turn on the MySQL Slow Log Query on QA/Alpha if needed.
+- Database Security Principles - Love it or hate it!
+  - Monitor MySQL User Activities and create scripts/procs that alerts the Top Dogs ⏰.
+  - Revoke user and app MySQL user priviledges every so often, so avoid credentials being leaked and threats approaching.
+  - Always pay attention to the type of access provided to the developer/user, especially in a production DB instance.
+    - Ask yourself, do they know what they are doing?
+    - Do they have the expert SQL ninja skills to battle the big beast?
+    - What operations will they perform, to what? Is it convenient timing? will it create a hiccup on the platform?
+    - Ensure that DBAs are held accountable.
+  - Always provide READ-ONLY access to production instances, hold only limited individuals accountable.
+  - Schedule and Off-load intensive SQLs, ETLs, Reporting to a timely off-peak period.
+  - DB Backup is essential, daily, nightly backups. The Golden rule is usually to replicate 3 copies, 2 copies remain on-site and the last off-site. This is intitiated from a Disaster Recovery Plan.  
 - TBC.
 
 ## Contributing
