@@ -78,7 +78,12 @@ The following are under consideration for future additions to this application.
     - Ensure that DBAs are held accountable.
   - Always provide READ-ONLY access to production instances, hold only limited individuals accountable.
   - Schedule and Off-load intensive SQLs, ETLs, Reporting to a timely off-peak period.
-  - DB Backup is essential, daily, nightly backups. The Golden rule is usually to replicate 3 copies, 2 copies remain on-site and the last off-site. This is intitiated from a Disaster Recovery Plan.  
+  - DB Backup is essential, daily, nightly backups. The Golden rule is usually to replicate 3 copies, 2 copies remain on-site and the last off-site. This is intitiated from a Disaster Recovery Plan.
+- Time to scale the DB?
+  - Horizontal Scaling [x]->[x], which is where Master/Slave(s) instances exist. There is a couple of things that come to mind.
+    - Identify the read heavy part of the applications. SELECT... any data in cache like Redis or Memcached?
+    - Read replicas will always be behind Write replicas, so what is the latency? How does this affect the data and in what way?
+  - DB Sharding, this is where you go back to the drawing board like the Normalisation step, You will define how you will split a massive table data into split tables, but here is the tricky part, you will need to know depending on the relational integrity how the applications will fetch the data and from which?
 - TBC.
 
 ## Contributing
