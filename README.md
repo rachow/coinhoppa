@@ -36,7 +36,7 @@ There is also a deployment **shell script** is to be used in QA/Prod environent.
 $ ./deploy.sh
 ```
 
-## Roadmap
+## Roadmap / TLD;R
 
 The following are under consideration for future additions to this application.
 
