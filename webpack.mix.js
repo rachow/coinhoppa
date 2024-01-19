@@ -19,16 +19,16 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/assets/dist/js');
 mix.js('resources/js/bundle.js', 'public/assets/dist/js');
 mix.js('resources/js/bugzy.js', 'public/assets/dist/js');
 mix.js('resources/js/ws.js', 'public/assets/dist/js');
+
+mix.js('resources/js/app.js', 'public/assets/dist/js');
+mix.js('./node_modules/flowbite/dist/flowbite.js', 'public/assets/dist/js');
 mix.postCss('resources/css/app.css', 'public/assets/dist/css', [
     require('tailwindcss'),
 ]);
-
-//mix.vue();
-//mix.sass('resources/sass/app.scss', 'public/assets/dist/css');
+mix.postCss('./node_modules/flowbite/dist/flowbite.css', 'public/assets/dist/css');
 
 mix.options({
   terser: {
