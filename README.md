@@ -93,7 +93,8 @@ The following are under consideration for future additions to this application.
 - Advanced Bot/Algorithm calcs using Python.
     - **NumPy** Open Source Library (Advanced Quantative Analysis and Scientitic calculation).
     - **Pandas** Open Source Library (Data Analysis and Manipulation, visualize data from OHLCV)
-    - **TensorFlow** TF Library used for Machine Learning (ML) and Artificial Intelligence (AI) for trading bots. 
+    - **TensorFlow** TF Library used for Machine Learning (ML) and Artificial Intelligence (AI) for trading bots.
+    - **TA-Lib** Open Source project [TA-Lib](https://ta-lib.org/) and Python Libarary for analyzing data related to indicators such as, MACD, BB, RSI and more. 
 - TBC.
 
 ## Contributing
