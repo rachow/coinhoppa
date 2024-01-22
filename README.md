@@ -36,6 +36,12 @@ There is also a deployment **shell script** is to be used in QA/Prod environent.
 $ ./deploy.sh
 ```
 
+## Diagrams
+Some initial diagrams to illustrate the platform in parts.
+
+![Coinhoppa-Architecture-Shared-Library](https://github.com/rachow/coinhoppa/assets/12745192/20f3eef1-0580-4a4c-ab26-8b8c1febbe12)
+
+
 ## Roadmap / TLD;R
 
 The following are under consideration for future additions to this application.
