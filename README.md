@@ -54,6 +54,7 @@ The following are under consideration for future additions to this application.
 - Deployer for deploying the app. [Laravel Deployer](https://deployer.org/docs/7.x/recipe/laravel) or [Laravel Forge](https://forge.laravel.com/).
 - To separate shared libraries to repo `coinhoppa.lib` and to enforce `\\Coinhoppa\\` namespace. Allowing us to easily add SDK packages including following PSR-0 standards. 
 - To add additional repositiories to existing you will need to add the `repositories:{}` element to the composer.json file [Repositories](https://getcomposer.org/doc/05-repositories.md).
+- [Coinhoppa Lib](https://github.com/rachow/coinhoppa.lib/tree/develop)
 - To embrace TALL stack (Tailwind, Alphine, ...).
 - Use of Telescope for optimisation and debugging must only be on dev local or QA.
 - To build frontend stack as SPA (Single Page Application), and allow connections to APIs to power all the bells & whistles. [JWT](https://jwt.io/) may end up in the mix here, also using the browsers localStorage && sessionStorage APIs.
