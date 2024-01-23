@@ -36,6 +36,12 @@ There is also a deployment **shell script** is to be used in QA/Prod environent.
 $ ./deploy.sh
 ```
 
+## Diagrams
+Some initial diagrams to illustrate the platform in parts.
+
+![Coinhoppa-Architecture-Shared-Library](https://github.com/rachow/coinhoppa/assets/12745192/20f3eef1-0580-4a4c-ab26-8b8c1febbe12)
+
+
 ## Roadmap / TLD;R
 
 The following are under consideration for future additions to this application.
@@ -54,6 +60,7 @@ The following are under consideration for future additions to this application.
 - Deployer for deploying the app. [Laravel Deployer](https://deployer.org/docs/7.x/recipe/laravel) or [Laravel Forge](https://forge.laravel.com/).
 - To separate shared libraries to repo `coinhoppa.lib` and to enforce `\\Coinhoppa\\` namespace. Allowing us to easily add SDK packages including following PSR-0 standards. 
 - To add additional repositiories to existing you will need to add the `repositories:{}` element to the composer.json file [Repositories](https://getcomposer.org/doc/05-repositories.md).
+- [Coinhoppa Lib](https://github.com/rachow/coinhoppa.lib/tree/develop)
 - To embrace TALL stack (Tailwind, Alphine, ...).
 - Use of Telescope for optimisation and debugging must only be on dev local or QA.
 - To build frontend stack as SPA (Single Page Application), and allow connections to APIs to power all the bells & whistles. [JWT](https://jwt.io/) may end up in the mix here, also using the browsers localStorage && sessionStorage APIs.
@@ -86,6 +93,15 @@ The following are under consideration for future additions to this application.
     - Identify the read heavy part of the applications. SELECT... any data in cache like Redis or Memcached?
     - Read replicas will always be behind Write replicas, so what is the latency? How does this affect the data and in what way?
   - DB Sharding, this is where you go back to the drawing board like the Normalisation step, You will define how you will split a massive table data into split tables, but here is the tricky part, you will need to know depending on the relational integrity how the applications will fetch the data and from which?
+- Introduce backend platform components in GO.
+  - Concurrency, Scalability, Performance.
+  - Network level language that allows us to work with TCP/IP fast.
+  - Parallel processing, multiple eXchange comms 
+- Advanced Bot/Algorithm calcs using Python.
+    - **NumPy** Open Source Library (Advanced Quantative Analysis and Scientitic calculation).
+    - **Pandas** Open Source Library (Data Analysis and Manipulation, visualize data from OHLCV)
+    - **TensorFlow** TF Library used for Machine Learning (ML) and Artificial Intelligence (AI) for trading bots.
+    - **TA-Lib** Open Source project [TA-Lib](https://ta-lib.org/) and Python Libarary for analyzing data related to indicators such as, MACD, BB, RSI and more. 
 - TBC.
 
 ## Contributing
