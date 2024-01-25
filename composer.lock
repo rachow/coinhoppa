@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9ac1d5f7472230aea467037ffca6428f",
+    "content-hash": "0cf46b8b26497821e6b886a2fb91f4c3",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -6734,6 +6734,67 @@
             "time": "2020-07-09T08:09:16+00:00"
         },
         {
+            "name": "laravel/breeze",
+            "version": "v1.19.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/breeze.git",
+                "reference": "725e0c4fb1f630afdd90b5fba2a7f6d8d547ac29"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/breeze/zipball/725e0c4fb1f630afdd90b5fba2a7f6d8d547ac29",
+                "reference": "725e0c4fb1f630afdd90b5fba2a7f6d8d547ac29",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^9.21|^10.0",
+                "illuminate/filesystem": "^9.21|^10.0",
+                "illuminate/support": "^9.21|^10.0",
+                "illuminate/validation": "^9.21|^10.0",
+                "php": "^8.0.2"
+            },
+            "conflict": {
+                "laravel/framework": "<9.37.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Breeze\\BreezeServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Breeze\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Minimal Laravel authentication scaffolding with Blade and Tailwind.",
+            "keywords": [
+                "auth",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel/breeze/issues",
+                "source": "https://github.com/laravel/breeze"
+            },
+            "time": "2023-02-18T20:55:43+00:00"
+        },
+        {
             "name": "laravel/sail",
             "version": "v1.27.0",
             "source": {
@@ -7209,6 +7270,68 @@
                 "source": "https://github.com/phar-io/version/tree/3.2.1"
             },
             "time": "2022-02-21T01:04:05+00:00"
+        },
+        {
+            "name": "phpstan/phpstan",
+            "version": "1.10.57",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpstan/phpstan.git",
+                "reference": "1627b1d03446904aaa77593f370c5201d2ecc34e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/1627b1d03446904aaa77593f370c5201d2ecc34e",
+                "reference": "1627b1d03446904aaa77593f370c5201d2ecc34e",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2|^8.0"
+            },
+            "conflict": {
+                "phpstan/phpstan-shim": "*"
+            },
+            "bin": [
+                "phpstan",
+                "phpstan.phar"
+            ],
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHPStan - PHP Static Analysis Tool",
+            "keywords": [
+                "dev",
+                "static analysis"
+            ],
+            "support": {
+                "docs": "https://phpstan.org/user-guide/getting-started",
+                "forum": "https://github.com/phpstan/phpstan/discussions",
+                "issues": "https://github.com/phpstan/phpstan/issues",
+                "security": "https://github.com/phpstan/phpstan/security/policy",
+                "source": "https://github.com/phpstan/phpstan-src"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/ondrejmirtes",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/phpstan",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/phpstan/phpstan",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-01-24T11:51:34+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
