@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Collection;
+use Illuminate\Http\Request;
 
 class KlineService
 {
