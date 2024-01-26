@@ -19,7 +19,7 @@ class TelescopeServiceProvider extends TelescopeApplicationServiceProvider
         $this->hideSensitiveRequestDetails();
 
         Telescope::filter(function (IncomingEntry $entry) {
-            if ($this->app->environment('local')) {
+            if ($this->app->environment(['local', 'development', 'staging'])) {
                 return true;
             }
 
@@ -36,7 +36,7 @@ class TelescopeServiceProvider extends TelescopeApplicationServiceProvider
      */
     protected function hideSensitiveRequestDetails(): void
     {
-        if ($this->app->environment('local')) {
+        if ($this->app->environment(['local', 'development', 'staging'])) {
             return;
         }
 
@@ -60,6 +60,21 @@ class TelescopeServiceProvider extends TelescopeApplicationServiceProvider
             return in_array($user->email, [
                 //
             ]);
+        });
+    }
+
+    /**
+     * Configure the Telescope authorization services.
+     *
+     * @return void
+     */
+    protected function authorization()
+    {
+        $this->gate();
+
+        Telescope::auth(function ($request) {
+            return app()->environment(['local', 'development', 'staging']) ||
+                   Gate::check('viewTelescope', [$request->user()]);
         });
     }
 }
