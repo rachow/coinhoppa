@@ -92,7 +92,8 @@ The following are under consideration for future additions to this application.
   - Horizontal Scaling [x]->[x], which is where Master/Slave(s) instances exist. There is a couple of things that come to mind.
     - Identify the read heavy part of the applications. SELECT... any data in cache like Redis or Memcached?
     - Read replicas will always be behind Write replicas, so what is the latency? How does this affect the data and in what way?
-  - DB Sharding, this is where you go back to the drawing board like the Normalization step, You will define how you will split a massive table data into split tables, but here is the tricky part, you will need to know depending on the relational integrity how the applications will fetch the data and from which?
+  - DB Sharding, this is where you go back to the drawing board like the Normalization step, You will define how you will split a massive table data into split tables, but here is the tricky part, you will need to know depending on the relational integrity how the applications will fetch the data and from which sharded table?
+  - You could use the primary KEY and write a stub that will determine the table based on the AUTO-INCREMENTAL field or you will create pivot tables to hold sharding lookup reference.
 - Introduce backend platform components in GO.
   - Concurrency, Scalability, Performance.
   - Network level language that allows us to work with TCP/IP fast.
