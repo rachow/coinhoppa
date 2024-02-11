@@ -46,7 +46,7 @@ Some initial diagrams to illustrate the platform in parts.
 
 The following are under consideration for future additions to this application.
 
-- Connection to websocket server for example - `wss://localhost:8989`.
+- Connection to websocket server for example - `wss://localhost:8989`. Aha moment is that frontend SPAs will tinker with ://coinhoppa.com:8989 ...
 - Websocket server is bi-directional comms channel, feeding data to frontend as and when data changes or becomes available.
 - Websocket to be built in Node.js or PHP through [RachetPHP](http://socketo.me/), [Swoole](https://openswoole.com/), etc.
 - OHLCV (**O**pen, **H**igh, **L**ow, **C**lose, **V**olume) data is captured from leading Exchange platforms such as **Binance**, **Kraken**, **Coinbase** with consolidation and stored in InfluxDB or MongoDB.
