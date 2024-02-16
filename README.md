@@ -8,6 +8,11 @@ The project is on-going with changes added as seen feasible.
 
 <img width="474" alt="coinhoppa-logo" src="https://github.com/rachow/coinhoppa/assets/12745192/cd2e02f9-554f-4d9f-bc50-d2de5e8bfd07">
 
+Tree Snapshot of the shared library in progress.
+
+![image](https://github.com/rachow/coinhoppa/assets/12745192/6d338d36-1288-4e1f-b8d0-8bfd4344e608)
+
+
 ## Installation
 
 You can copy and download this repository. Here is an example.
