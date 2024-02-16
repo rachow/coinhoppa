@@ -30,7 +30,7 @@ $ npm run build
 $ php artisan serve
   INFO  Server running on [http://127.0.0.1:8000].
 ```
-There is also a deployment **shell script** is to be used in QA/Prod environent. You may need to customise some of the tasks within the shell script, for example to the `$ ./artisan down` can accept other arguments to allow access by certain IP address or using a bypass token.
+There is also a deployment **shell script** is to be used in QA/Prod environment. You may need to customise some of the tasks within the shell script, for example to the `$ ./artisan down` can accept other arguments to allow access by certain IP address or using a bypass token.
 
 ```
 # run the procedural tasks to deploy
