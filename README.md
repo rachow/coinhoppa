@@ -32,6 +32,8 @@ $ php artisan serve
 ```
 There is also a deployment **shell script** is to be used in QA/Prod environment. You may need to customise some of the tasks within the shell script, for example to the `$ ./artisan down` can accept other arguments to allow access by certain IP address or using a bypass token.
 
+Also note that the down argument can accept a `--retry=60` that will force the View Object to return HTML which includes the meta refresh tag. The meta refresh tag allows us to ensure that the page is reloaded in set interval in situations when we are certain that the platform will be brought back up in [x] seconds or forces the users session to reload without the user taking an action. 
+
 ```
 # run the procedural tasks to deploy
 $ ./deploy.sh
