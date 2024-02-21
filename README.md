@@ -102,15 +102,16 @@ The following are under consideration for future additions to this application.
     - Read replicas will always be behind Write replicas, so what is the latency? How does this affect the data and in what way?
   - DB Sharding, this is where you go back to the drawing board like the Normalization step, You will define how you will split a massive table data into split tables, but here is the tricky part, you will need to know depending on the relational integrity how the applications will fetch the data and from which sharded table?
   - You could use the primary KEY and write a stub that will determine the table based on the AUTO-INCREMENTAL field or you will create pivot tables to hold sharding lookup reference.
-- Introduce backend platform components in GO.
+- Introduce backend platform components in GO for low level interaction within the OSI model.
   - Concurrency, Scalability, Performance.
-  - Network level language that allows us to work with TCP/IP fast.
+  - Network level (OSI) language that allows us to work with TCP/IP fast.
   - Parallel processing, multiple eXchange comms 
 - Advanced Bot/Algorithm calcs using Python.
     - **NumPy** Open Source Library (Advanced Quantative Analysis and Scientitic calculation).
     - **Pandas** Open Source Library (Data Analysis and Manipulation, visualize data from OHLCV)
     - **TensorFlow** TF Library used for Machine Learning (ML) and Artificial Intelligence (AI) for trading bots.
     - **TA-Lib** Open Source project [TA-Lib](https://ta-lib.org/) and Python Libarary for analyzing data related to indicators such as, MACD, BB, RSI and more. 
+- 2FA and MFA Authentication mechanisms for Traders and Admins where possible.
 - TBC.
 
 ## Contributing
