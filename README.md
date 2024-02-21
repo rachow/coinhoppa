@@ -54,6 +54,7 @@ Tree Snapshot of the shared library in progress.
 The following are under consideration for future additions to this application.
 
 - Connection to websocket server for example - `wss://localhost:8989`. Aha moment is that frontend SPAs will tinker with ://coinhoppa.com:8989 ...
+- Internal Hosts mapping can consist where `WS://` is the websocket connection. For external connection the protocol `WSS://` must be used for a secure connection.
 - Websocket server is bi-directional comms channel, feeding data to frontend as and when data changes or becomes available.
 - Websocket to be built in Node.js or PHP through [RachetPHP](http://socketo.me/), [Swoole](https://openswoole.com/), etc.
 - OHLCV (**O**pen, **H**igh, **L**ow, **C**lose, **V**olume) data is captured from leading Exchange platforms such as **Binance**, **Kraken**, **Coinbase** with consolidation and stored in InfluxDB or MongoDB.
