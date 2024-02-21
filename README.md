@@ -62,7 +62,7 @@ The following are under consideration for future additions to this application.
 - For production use case only if available to public (www), proxy the request to port mapping for example `wss://www.example.com:8989`.
 - Allow traders to download their trading history by connecting their exchange platform and sync'ing their trading data in XLS format.
 - Allow traders to create rules for the trading bots (DCA - Dollar-Cost-Average).
-- Process that runs on node [x]-[x]-[x] / EC2, process control `PCNTL` through `supervisord`.
+- Process that runs on node [x]-[x]-[x] / EC2, process control `PCNTL` through `supervisord`. This allows us to ensure that the worker process is always running.
 - Add TA (**Technical Analysis**) modules for further analysis on the coins using BB, MACD, RSI, etc.
 - Auth0 authentication for SSO between other apps, to handle blacklisting (IPV4/IPV6) and Dos/DDos mitigation, API authentication and more. Amazon also play important role, stick a Gateway API, WAF, Firewall.
 - Deployer for deploying the app. [Laravel Deployer](https://deployer.org/docs/7.x/recipe/laravel) or [Laravel Forge](https://forge.laravel.com/).
